@@ -22,12 +22,14 @@ def _find_header_row(csv_path: str) -> int:
 
 def _clean_domain(url: str) -> Optional[str]:
     """Extracts a clean, lowercase domain from a URL string."""
-    if pd.isna(url) or not isinstance(url, str):
+    if pd.isna(url) or not isinstance(url, str) or url.strip() == "":
         return None
     if not url.startswith(('http://', 'https://')):
         url = 'https://' + url
     try:
         domain = urlparse(url).netloc.lower()
+        if not domain or domain in ['invalid-url', 'not-a-url']:
+            return None
         return domain[4:] if domain.startswith('www.') else domain
     except Exception:
         return None

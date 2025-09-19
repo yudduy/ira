@@ -68,7 +68,7 @@ class WaybackClient:
             except requests.exceptions.RequestException as e:
                 logger.warning(f"CDX query failed for {domain} (Attempt {attempt + 1}): {e}")
                 if attempt == config.MAX_RETRIES - 1:
-                    return {'success': False, 'error': str(e)}
+                    return {'success': False, 'error': 'Max retries exceeded'}
                 await asyncio.sleep(2 ** attempt)
 
         return {'success': False, 'error': 'Max retries exceeded'}

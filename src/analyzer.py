@@ -42,9 +42,9 @@ class IRACorporateAnalyzer:
         self.session.headers.update({
             'User-Agent': 'Academic Research - IRA Corporate Analysis (Stanford GSB)'
         })
-        openai_client = openai.AsyncOpenAI(api_key=api_key)
+        self.openai_client = openai.AsyncOpenAI(api_key=api_key)
         self.wayback_client = WaybackClient(self.session)
-        self.llm_handler = LLMHandler(openai_client)
+        self.llm_handler = LLMHandler(self.openai_client)
         logger.info("IRA Corporate Analyzer initialized successfully.")
 
     async def analyze_company(self, company_row: pd.Series) -> Dict:
