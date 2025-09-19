@@ -1,0 +1,7 @@
+pandas
+requests
+beautifulsoup4
+openai
+lxml
+tqdm
+python-dotenv
