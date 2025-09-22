@@ -1,11 +1,11 @@
-# Project: IRA Corporate Messaging Stability Analysis
+# Project: IRA 
 
 This project analyzes changes in corporate messaging around the passage of the U.S. Inflation Reduction Act (IRA) to validate the use of contemporary company descriptions for academic research.
 
 ---
 ### 1. Core Research Objective
 
-**First Principle**: Research conclusions are only as reliable as the underlying data. If a major policy intervention (the IRA) caused firms to systematically alter their self-descriptions, using post-policy descriptions as a proxy for a pre-policy state is methodologically unsound.
+Research conclusions are only as reliable as the underlying data. If a major policy intervention (like the IRA) caused firms to systematically alter their self-descriptions, using post-policy descriptions as a proxy for a pre-policy state is methodologically unsound.
 
 **Objective**: To conduct a **Stability Validation Study**. We test the hypothesis that corporate messaging for a sample of firms remained largely stable before and after the IRA's passage in August 2022. This validates the use of 2025-era data as representative of the firms' 2022 strategic focus.
 
@@ -33,7 +33,7 @@ The LLM first assesses these granular components and then synthesizes an `overal
 ---
 ### 3. Technical Implementation
 
-**First Principle**: A research tool must be resilient to real-world conditions and produce transparent, auditable data.
+A research tool must be resilient to real-world conditions and produce transparent, auditable data.
 
 * **Architecture**: The Python-based tool is modular, separating data loading, web scraping, and AI analysis into distinct components for clarity and maintainability.
 * **Tooling**: We use `requests` and `BeautifulSoup` for efficient data extraction from the Wayback Machine's static HTML archives.
@@ -46,8 +46,8 @@ The LLM first assesses these granular components and then synthesizes an `overal
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository_url>
-    cd ira_corporate_analysis
+    git clone https://github.com/yudduy/ira.git
+    cd ira
     ```
 
 2.  **Install dependencies:**
@@ -74,7 +74,7 @@ The LLM first assesses these granular components and then synthesizes an `overal
 ### 5. Project Structure
 
 ```
-ira_corporate_analysis/
+ira/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
@@ -123,18 +123,7 @@ This tool enables researchers to:
 * **Rate Limiting**: Wayback Machine API has usage limits that may slow large-scale analysis
 
 ---
-### 9. Citation
-
-If you use this tool in your research, please cite:
-
-```
-IRA Corporate Messaging Stability Analysis Tool
-Academic Research - Stanford Graduate School of Business
-Version 5.0 (Hierarchical Analysis Update)
-```
-
----
-### 10. Contributing
+### 9. Contributing
 
 This is an academic research tool. For questions, issues, or contributions, please contact the research team or open an issue in this repository.
 
